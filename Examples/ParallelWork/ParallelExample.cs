@@ -8,13 +8,14 @@ namespace Scratchpad.Examples
         public async Task InvokeAsync()
         {
             async Task LongRunningWork() => await Task.Delay(1000);
-            List<Task> tasks = new();
-            tasks.Add(LongRunningWork());
-            tasks.Add(LongRunningWork());
-            tasks.Add(LongRunningWork());
-            tasks.Add(LongRunningWork());
-            tasks.Add(LongRunningWork());
-            await Task.WhenAll(tasks);
+            await Task.WhenAll(new List<Task>()
+            {
+                LongRunningWork(),
+                LongRunningWork(),
+                LongRunningWork(),
+                LongRunningWork(),
+                LongRunningWork()
+            });
         }
     }
 }
