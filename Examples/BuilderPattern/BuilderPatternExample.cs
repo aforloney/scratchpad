@@ -19,7 +19,7 @@ namespace Scratchpad.Examples
         {
             Person person = PersonBuilder.Create()
                 .WithName("Anthony")
-                .WithPhoneNumber("1-401-569-2297")
+                .WithPhoneNumber("1-234-456-7890")
                 .HavingJob(builder => {
                     builder
                         .WithName("Software Engineer")
@@ -28,7 +28,7 @@ namespace Scratchpad.Examples
                 .HavingJob(builder => {
                     builder
                         .WithName("Dog Dad")
-                        .WithAddress("26 Pearl St, Quincy, MA 02169");
+                        .WithAddress("26 Pearly Teeth Dr, Happyville, TX");
                 })
                 .Build();
 
